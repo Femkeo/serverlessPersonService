@@ -1,0 +1,21 @@
+service: serverless-person-service
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-1
+  stage: dev
+  environment:
+    REGION: eu-west-1
+    PERSON_TABLE: ${self:custom.stage}-PERSON
+custom:
+  stage: ${opt:stage, self:provider.stage}
+resources:
+  Resources:
+
+functions:
+  createPerson:
+    handler: createPerson/createPerson.main
+    events:
+      - http:
+          path: person/create
+          method: post

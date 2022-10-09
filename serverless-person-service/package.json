@@ -1,0 +1,18 @@
+{
+  "name": "serverless-person-service",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps:reinstall": "rm -rf .serverless && rm -rf node_modules && npm install",
+    "deploy:dev": "serverless deploy",
+    "deploy:prod": "serverless deploy --stage prod"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "http-status-codes": "^2.2.0",
+    "aws-sdk": "^2.1231.0",
+    "serverless": "^3.22.0"
+  }
+}
