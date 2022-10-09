@@ -1,1 +1,6 @@
 serverless-person-service/node_modules
+serverless-person-service/.serverless/
+serverless-person-service/.serverless/cloudformation-template-create-stack.json
+serverless-person-service/.serverless/cloudformation-template-update-stack.json
+serverless-person-service/.serverless/createPerson.zip
+serverless-person-service/.serverless/serverless-state.json
