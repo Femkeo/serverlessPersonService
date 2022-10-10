@@ -29,7 +29,7 @@ Whenever this is finished, a message will be send to a SQS queue, so that other 
 
 ### How does to use?
 Since the service uses serverless, please use 
-```serverless configure```
+```aws configure```
 to setup the access key values, for the desired AWS account it should be deployed in. The project uses the region eu-west-1 by default, but please feel free to alter this in the serverless.yml file, or add an extra flag when deploying.
 
 In the serverless.yml file, some variables are specified. The framwork assumes that it will be deployed in a dev environment, but ofcourse its also possible to deploy it in (for example) a prod environment. This can be done by adding and extra flag to the deployment
