@@ -2,12 +2,6 @@ import AWS from 'aws-sdk';
 
 const client = new AWS.DynamoDB.DocumentClient();
 
-/**
- * Call to dynamodb library
- * @param action
- * @param params
- * @returns {*}
- */
 export function call(action, params) {
 	AWS.config.update({ region: process.env.REGION });
 
@@ -17,10 +11,10 @@ export function call(action, params) {
 }
 
 export default {
-	get: params => client.get(params).promise(),
-	put: params => client.put(params).promise(),
-	query: params => client.query(params).promise(),
-	update: params => client.update(params).promise(),
-	delete: params => client.delete(params).promise(),
-	scan: params => client.scan(params).promise()
+	get: async params => await client.get(params).promise(),
+	put: async params => await client.put(params).promise(),
+	query: async params => await client.query(params).promise(),
+	update: async params => await client.update(params).promise(),
+	delete: async params => await client.delete(params).promise(),
+	scan: async params => await client.scan(params).promise()
 };

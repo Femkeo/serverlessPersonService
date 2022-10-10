@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "45651d06-cb30-43a2-a1ac-324d5fddce12",
+		"name": "PersonService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3154552"
+	},
+	"item": [
+		{
+			"name": "https://pk357r8e8j.execute-api.eu-west-1.amazonaws.com/dev/person/create",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKeyId}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"firstName\",\n    \"lastName\": \"lastName\",\n    \"phoneNumber\": \"0612345678\",\n    \"address\": \"niceStreet 40\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pk357r8e8j.execute-api.eu-west-1.amazonaws.com/dev/person/create",
+					"protocol": "https",
+					"host": [
+						"pk357r8e8j",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"person",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "awsv4",
+		"awsv4": [
+			{
+				"key": "secretKey",
+				"value": "FvOJrnIWBDHIAD7qYTwvscwTTbiHcw8qfCzMw9l1",
+				"type": "string"
+			},
+			{
+				"key": "accessKey",
+				"value": "AKIARWXWM4H6UDJ76M5R",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "API GATEWAY POST URL GOES HERE",
+			"type": "string"
+		},
+		{
+			"key": "AccessKeyId",
+			"value": "ACCESS KEY ID GOES HERE"
+		},
+		{
+			"key": "AccessKeySecret",
+			"value": "ACCESS KEY SECRET GOES HERE"
+		}
+	]
+}
