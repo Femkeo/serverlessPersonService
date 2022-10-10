@@ -14,12 +14,17 @@
 					"awsv4": [
 						{
 							"key": "secretKey",
-							"value": "{{secretKey}}",
+							"value": "{{AccessKeySecret}}",
 							"type": "string"
 						},
 						{
 							"key": "accessKey",
-							"value": "{{accessKeyId}}",
+							"value": "{{AccessKeyId}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "eu-west-1",
 							"type": "string"
 						}
 					]
@@ -28,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"firstName\",\n    \"lastName\": \"lastName\",\n    \"phoneNumber\": \"0612345678\",\n    \"address\": \"niceStreet 40\"\n}",
+					"raw": "{\n    \"firstName\": \"firstName\",\n    \"lastName\": \"lastName\",\n    \"phoneNumber\": \"0612345678\",\n    \"address\": \"niceStreet 23\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,19 +41,9 @@
 					}
 				},
 				"url": {
-					"raw": "URL GOES HERE",
-					"protocol": "https",
+					"raw": "{{url}}",
 					"host": [
-						"pk357r8e8j",
-						"execute-api",
-						"eu-west-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"dev",
-						"person",
-						"create"
+						"{{url}}"
 					]
 				}
 			},
@@ -59,13 +54,18 @@
 		"type": "awsv4",
 		"awsv4": [
 			{
+				"key": "region",
+				"value": "eu-west-1",
+				"type": "string"
+			},
+			{
 				"key": "secretKey",
-				"value": "{{AccessKeySecret}}",
+				"value": "ACCESS KEY SECRET GOES HERE",
 				"type": "string"
 			},
 			{
 				"key": "accessKey",
-				"value": "{{AccessKeyId}}",
+				"value": "ACCESS KEY ID GOES HERE",
 				"type": "string"
 			}
 		]
