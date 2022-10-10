@@ -12,6 +12,7 @@ The services used for this are:
 • DynamoDB
 • Cloudwatch
 • SQS
+• S3 is used out of the box by the serverless framework
 
 the serverless framework is used, with the lambda's written in NodeJs.
 

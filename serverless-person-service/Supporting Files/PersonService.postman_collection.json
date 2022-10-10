@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "https://pk357r8e8j.execute-api.eu-west-1.amazonaws.com/dev/person/create",
+			"name": "createPerson",
 			"request": {
 				"auth": {
 					"type": "awsv4",
@@ -36,7 +36,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://pk357r8e8j.execute-api.eu-west-1.amazonaws.com/dev/person/create",
+					"raw": "URL GOES HERE",
 					"protocol": "https",
 					"host": [
 						"pk357r8e8j",
@@ -60,12 +60,12 @@
 		"awsv4": [
 			{
 				"key": "secretKey",
-				"value": "FvOJrnIWBDHIAD7qYTwvscwTTbiHcw8qfCzMw9l1",
+				"value": "{{AccessKeySecret}}",
 				"type": "string"
 			},
 			{
 				"key": "accessKey",
-				"value": "AKIARWXWM4H6UDJ76M5R",
+				"value": "{{AccessKeyId}}",
 				"type": "string"
 			}
 		]
@@ -93,7 +93,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "API GATEWAY POST URL GOES HERE",
+			"value": "URL GOES HERE",
 			"type": "string"
 		},
 		{
